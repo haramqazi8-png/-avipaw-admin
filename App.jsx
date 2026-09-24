@@ -12,13 +12,13 @@ import { useEffect, useState } from "react";
 
 import "./index.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://avipaw-rescue-production.up.railway.app/api";
 
 async function uploadToImgBB(file) {
   const formData = new FormData();
   formData.append("image", file);
   const response = await fetch(
-    "http://localhost:5000/api/upload",
+    "https://avipaw-rescue-production.up.railway.app/api/upload",
     { method: "POST", body: formData }
   );
   const data = await response.json();
